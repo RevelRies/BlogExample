@@ -18,7 +18,7 @@ class HomepageTest(SimpleTestCase):
         self.assertTemplateUsed(response, 'blog/home.html')
 
     def test_template_content(self):
-        ''' проверка на содержание шаблона для страницы по ее name '''
+        ''' проверка на содержание текста в шаблоне для страницы по ее name '''
         response = self.client.get(reverse('home'))
         self.assertContains(response, "<h1>Home Page</h1>")
 
@@ -40,7 +40,7 @@ class AboutpageTest(SimpleTestCase):
         self.assertTemplateUsed(response, 'blog/about.html')
 
     def test_template_content(self):
-        ''' проверка на содержание шаблона для страницы по ее name '''
+        ''' проверка на содержание текста в шаблоне для страницы по ее name '''
         response = self.client.get(reverse('about'))
         self.assertContains(response, "<h1>About</h1>")
 
